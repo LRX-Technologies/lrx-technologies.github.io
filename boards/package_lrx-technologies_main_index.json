@@ -1018,8 +1018,8 @@
           "architecture": "nrf52",
           "version": "9.0.0",
           "category": "LRX",
-          "url": "file:///D:/onedrive/documents/arduino/boards/ELDIM-CRNV-9.0.0.zip",
-          "archiveFileName": "ELDIM-CRNV-9.0.0.zip",
+          "url": "https://lrx-technologies.github.io/packages_index/lrx-technologies_nrf52_9.0.0.zip,
+          "archiveFileName": "lrx-technologies_nrf52_9.0.0.zip",
           "checksum": "SHA-256:d5b00a949e854b3e80527ae260fd6ad2fda12a7543332537dd8796a8be03e88d",
           "size": "17103793",
           "help": {
