@@ -1,2 +1,2 @@
-https://lrx-technologies.github.io/package_lrx-technologies_main_index.json
-https://lrx-technologies.github.io/packages_index/lrx-technologies_nrf52_9.0.0.zip
+https://lrx-technologies.github.io/boards/package_lrx-technologies_main_index.json
+https://lrx-technologies.github.io/boards/lrx-technologies_nrf52_9.0.0.zip
