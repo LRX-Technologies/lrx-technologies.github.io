@@ -1,0 +1,2 @@
+https://lrx-technologies.github.io/package_lrx-technologies_main_index.json
+https://lrx-technologies.github.io/ELDIM-CRNV-9.0.0.zip
