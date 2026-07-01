@@ -1020,8 +1020,8 @@
           "category": "LRX",
           "url": "https://lrx-technologies.github.io/boards/lrx-technologies_nrf52_9.0.0.zip",
           "archiveFileName": "lrx-technologies_nrf52_9.0.0.zip",
-          "checksum": "SHA-256:d5b00a949e854b3e80527ae260fd6ad2fda12a7543332537dd8796a8be03e88d",
-          "size": "17103793",
+          "checksum": "SHA-256:9B7F6F954E232BF48B83F8CF7A3C807DF4E542C74C3096D1696746E3B39A2587",
+          "size": "17124813",
           "help": {
             "online": "https://www.lrx-technologies.com/"
           },
