@@ -2,25 +2,23 @@
   "packages": [   
 	{ 
 	 
-	  "name": "LRX Technologies",
-      "maintainer": "SASU LRX Technologies",
+	  "name": "lrx_technologies",
+      "maintainer": "LRX Technologies",
       "email": "support@lrx-technologies.com",
-      "help": {
-        "online": "https://www.lrx-technologies.com/help"
-      },
+      "websiteURL" : "https://www.lrx-technologies.com",
+      
       "platforms": [
       {
-          "name": "LRX Technologies nrf52840 Boards",
+          "name": "LRX Technologies - nrf52840 Boards",
           "architecture": "nrf52",
           "version": "9.0.0",
-          "category": "Custom",
+          "category": "Contributed",
           "url": "https://lrx-technologies.github.io/boards/lrx-technologies_nrf52_9.0.0.zip",
           "archiveFileName": "lrx-technologies_nrf52_9.0.0.zip",
-          "checksum": "SHA-256:9B7F6F954E232BF48B83F8CF7A3C807DF4E542C74C3096D1696746E3B39A2587",
-          "size": 17124813,
+          "checksum": "SHA-256:03AB4CAAF3E5EA9C0AC9672C8A4420637719198BA7B57EB35F734738FDB7C454",
+          "size": 171114490,
           "boards": [
-            { "name": "AMLOS" },
-            { "name": "LoopX V1.XX" },          
+            { "name": "AMLOS" },     
             { "name": "LoopX V1.5X" }
           ],
           "toolsDependencies": [

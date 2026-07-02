@@ -1,2 +1,5 @@
 https://lrx-technologies.github.io/boards/package_lrx-technologies_main_index.json
 https://lrx-technologies.github.io/boards/lrx-technologies_nrf52_9.0.0.zip
+
+open powershell window and :
+Get-FileHash .\lrx-technologies_nrf52_9.0.0.zip -Algorithm SHA256 | Forat-List
