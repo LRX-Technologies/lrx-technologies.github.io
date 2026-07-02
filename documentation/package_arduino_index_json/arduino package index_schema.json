@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Arduino Package Index",
+  "type": "object",
+  "properties": {
+    "packages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "maintainer": { "type": "string" },
+          "websiteURL": { "type": "string", "format": "uri" },
+          "email": { "type": "string", "format": "email" },
+          "help": {
+            "type": "object",
+            "properties": {
+              "online": { "type": "string", "format": "uri" }
+            },
+            "required": ["online"]
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "architecture": { "type": "string" },
+                "version": { "type": "string" },
+                "category": { "type": "string" },
+                "url": { "type": "string", "format": "uri" },
+                "archiveFileName": { "type": "string" },
+                "checksum": { "type": "string" },
+                "size": { "type": "integer" },
+                "boards": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": { "type": "string" }
+                    },
+                    "required": ["name"]
+                  }
+                },
+                "toolsDependencies": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "packager": { "type": "string" },
+                      "name": { "type": "string" },
+                      "version": { "type": "string" }
+                    },
+                    "required": ["packager", "name", "version"]
+                  }
+                }
+              },
+              "required": [
+                "name", "architecture", "version",
+                "url", "archiveFileName", "checksum", "size"
+              ]
+            }
+          },
+          "tools": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "versions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "version": { "type": "string" },
+                      "systems": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "host": { "type": "string" },
+                            "url": { "type": "string", "format": "uri" },
+                            "archiveFileName": { "type": "string" },
+                            "checksum": { "type": "string" },
+                            "size": { "type": "integer" }
+                          },
+                          "required": [
+                            "host", "url", "archiveFileName", "checksum", "size"
+                          ]
+                        }
+                      }
+                    },
+                    "required": ["version", "systems"]
+                  }
+                }
+              },
+              "required": ["name", "versions"]
+            }
+          }
+        },
+        "required": ["name", "maintainer", "platforms"]
+      }
+    }
+  },
+  "required": ["packages"]
+}

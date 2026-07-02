@@ -1,0 +1,124 @@
+The Arduino Package Index JSON specification defines the structure of the package_index.json file used by the Arduino IDE and Arduino CLI to list and install board platforms via the Boards Manager.
+Below is a concise JSON Schema (draft-07) that models the official Arduino package index format, based on the Arduino CLI documentation.
+
+JSON Schema for package_index.json
+Json{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Arduino Package Index",
+  "type": "object",
+  "properties": {
+    "packages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "maintainer": { "type": "string" },
+          "websiteURL": { "type": "string", "format": "uri" },
+          "email": { "type": "string", "format": "email" },
+          "help": {
+            "type": "object",
+            "properties": {
+              "online": { "type": "string", "format": "uri" }
+            },
+            "required": ["online"]
+          },
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "architecture": { "type": "string" },
+                "version": { "type": "string" },
+                "category": { "type": "string" },
+                "url": { "type": "string", "format": "uri" },
+                "archiveFileName": { "type": "string" },
+                "checksum": { "type": "string" },
+                "size": { "type": "integer" },
+                "boards": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": { "type": "string" }
+                    },
+                    "required": ["name"]
+                  }
+                },
+                "toolsDependencies": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "packager": { "type": "string" },
+                      "name": { "type": "string" },
+                      "version": { "type": "string" }
+                    },
+                    "required": ["packager", "name", "version"]
+                  }
+                }
+              },
+              "required": [
+                "name", "architecture", "version",
+                "url", "archiveFileName", "checksum", "size"
+              ]
+            }
+          },
+          "tools": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string" },
+                "versions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "version": { "type": "string" },
+                      "systems": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "host": { "type": "string" },
+                            "url": { "type": "string", "format": "uri" },
+                            "archiveFileName": { "type": "string" },
+                            "checksum": { "type": "string" },
+                            "size": { "type": "integer" }
+                          },
+                          "required": [
+                            "host", "url", "archiveFileName", "checksum", "size"
+                          ]
+                        }
+                      }
+                    },
+                    "required": ["version", "systems"]
+                  }
+                }
+              },
+              "required": ["name", "versions"]
+            }
+          }
+        },
+        "required": ["name", "maintainer", "platforms"]
+      }
+    }
+  },
+  "required": ["packages"]
+}
+
+
+Key Points
+
+packages: Array of vendor packages (e.g., arduino, esp32).
+platforms: Each platform entry describes a board core (architecture, version, download URL, checksum, etc.).
+tools: Optional; lists toolchains or utilities required by platforms.
+Checksums: Usually SHA-256 in the format SHA-256:abcdef....
+Size: File size in bytes.
+Required fields: The schema enforces the minimum required fields per Arduino’s specification.
+
+
+✅ If you want, I can also give you a minimal valid package_index.json example that passes this schema so you can test it with Arduino CLI.
+Do you want me to prepare that?

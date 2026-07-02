@@ -1,0 +1,54 @@
+{
+  "packages": [
+    {
+      "name": "examplevendor",
+      "maintainer": "Example Maintainer",
+      "websiteURL": "https://example.com",
+      "email": "support@example.com",
+      "help": {
+        "online": "https://example.com/help"
+      },
+      "platforms": [
+        {
+          "name": "Example AVR Boards",
+          "architecture": "avr",
+          "version": "1.0.0",
+          "category": "Contributed",
+          "url": "https://example.com/files/example-avr-1.0.0.tar.bz2",
+          "archiveFileName": "example-avr-1.0.0.tar.bz2",
+          "checksum": "SHA-256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+          "size": 123456,
+          "boards": [
+            { "name": "Example Uno" }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "examplevendor",
+              "name": "example-tool",
+              "version": "1.0.0"
+            }
+          ]
+        }
+      ],
+      "tools": [
+        {
+          "name": "example-tool",
+          "versions": [
+            {
+              "version": "1.0.0",
+              "systems": [
+                {
+                  "host": "i686-mingw32",
+                  "url": "https://example.com/files/example-tool-1.0.0-windows.zip",
+                  "archiveFileName": "example-tool-1.0.0-windows.zip",
+                  "checksum": "SHA-256:abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcd",
+                  "size": 654321
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
