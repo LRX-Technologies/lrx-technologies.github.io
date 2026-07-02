@@ -16,7 +16,7 @@
           "url": "https://lrx-technologies.github.io/boards/lrx-technologies_nrf52_9.0.0.zip",
           "archiveFileName": "lrx-technologies_nrf52_9.0.0.zip",
           "checksum": "SHA-256:03AB4CAAF3E5EA9C0AC9672C8A4420637719198BA7B57EB35F734738FDB7C454",
-          "size": 171114490,
+          "size": 17114490,
           "boards": [
             { "name": "AMLOS" },     
             { "name": "LoopX V1.5X" }
